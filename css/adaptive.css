@@ -2,7 +2,8 @@
    ПЛАНШЕТНАЯ ВЕРСИЯ от 768px
 ===================================== */
 @media (min-width: 768px) {
-   /* 1️ меню становится горизонтальным*/
+
+    /* 1️ меню становится горизонтальным*/
     .header__nav {
         position: static;
         display: flex !important;
@@ -37,6 +38,16 @@
     .search__input {
         flex: 1;
     }
+
+    .popular__grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
 }
 
 /* =====================================
@@ -62,5 +73,9 @@
     /*8️ увеличиваем размер заголовков */
     .section-title {
         font-size: 32px;
+    }
+
+    .card {
+        width: 18%;
     }
 }

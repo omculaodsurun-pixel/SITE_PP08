@@ -15,7 +15,9 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -192,4 +194,46 @@ section {
     flex-direction: column;
     gap: 10px;
     margin-top: 15px;
+}
+
+/* =============================
+   ПОПУЛЯРНЫЕ ИГРЫ
+============================= */
+
+.popular__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card__title {
+    margin-bottom: 10px;
+}
+
+.card__rating {
+    color: gold;
+    margin: 10px 0;
+}
+
+.card__price {
+    margin-bottom: 15px;
+    color: #a29bfe;
+    font-weight: 500;
 }

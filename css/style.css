@@ -13,6 +13,9 @@ body {
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -236,4 +239,63 @@ section {
     margin-bottom: 15px;
     color: #a29bfe;
     font-weight: 500;
+}
+
+/* =============================
+   ВХОД
+============================= */
+
+.auth {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth__container {
+    text-align: center;
+    width: 100%;
+}
+
+.auth__title {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.form {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.form__label {
+    text-align: left;
+    font-size: 14px;
+}
+
+.form__input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.form__button {
+    margin-top: 10px;
+}
+
+.form__link {
+    font-size: 14px;
+    color: #a29bfe;
+    text-align: center;
+}
+main {
+    flex: 1;
 }

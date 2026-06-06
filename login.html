@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Вход — GameSadyg</title>
+
+    <!-- Шрифты -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="header__logo">
+            <img src="images/logotip.svg" alt="Логотип GameSadyg">
+            <span class="header__title">GameSadyg</span>
+        </div>
+
+        <nav class="header__nav active">
+            <a href="index.html" class="header__link">Главная</a>
+            <a href="catalog.html" class="header__link">Каталог</a>
+            <a href="register.html" class="header__link">Регистрация</a>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="auth">
+
+        <section class="auth__container">
+
+            <h2 class="auth__title">Вход в личный кабинет</h2>
+
+            <form class="form">
+
+                <label class="form__label">E-mail</label>
+                <input type="email" class="form__input" required>
+
+                <label class="form__label">Пароль</label>
+                <input type="password" class="form__input" required>
+
+                <button type="submit" class="button form__button">
+                    Войти
+                </button>
+
+                <a href="#" class="form__link">
+                    Забыли пароль?
+                </a>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>© 2026 GameSadyg</p>
+    </footer>
+
+</body>
+
+</html>

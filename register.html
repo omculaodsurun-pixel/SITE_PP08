@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — GameSadyg</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+
+<body class="dark-theme">
+
+    <header class="header">
+        <div class="header__logo">
+            <img src="images/logotip.svg" alt="Логотип GameSadyg">
+            <span class="header__title">GameSadyg</span>
+        </div>
+
+        <nav class="header__nav active">
+            <a href="index.html" class="header__link">Главная</a>
+            <a href="catalog.html" class="header__link">Каталог</a>
+            <a href="login.html" class="header__link">Вход</a>
+        </nav>
+    </header>
+
+    <main class="auth">
+
+        <section class="auth__container">
+
+            <h2 class="auth__title">Регистрация</h2>
+
+            <form class="form">
+
+                <label class="form__label">E-mail</label>
+                <input type="email" class="form__input" placeholder="Пример@mail.ru" required>
+
+                <label class="form__label">Фамилия</label>
+                <input type="text" class="form__input" required>
+
+                <label class="form__label">Имя</label>
+                <input type="text" class="form__input" required>
+
+                <label class="form__label">Дата рождения</label>
+                <input type="date" class="form__input" required>
+
+                <label class="form__label">Номер телефона</label>
+                <input type="tel" class="form__input" placeholder="+7 " required>
+
+                <label class="form__label">Пароль</label>
+                <input type="password" class="form__input" placeholder="Придумайте пароль от 8 символов" required>
+
+                <label class="form__label">Подтвердить пароль</label>
+                <input type="password" class="form__input" placeholder="Повторите пароль" required>
+
+                <label class="form__checkbox">
+                    <input type="checkbox" required>
+                    Я согласен на обработку персональных данных
+                </label>
+
+                <button type="submit" class="button form__button">
+                    Зарегистрироваться
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 GameSadyg</p>
+    </footer>
+
+</body>
+
+</html>

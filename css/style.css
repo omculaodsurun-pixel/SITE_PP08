@@ -272,7 +272,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .form__label {
@@ -281,10 +281,16 @@ section {
 }
 
 .form__input {
+    background-color: #555;
     padding: 12px;
     border-radius: 8px;
     border: none;
     outline: none;
+    color:white;
+
+}
+.form__input::placeholder {
+    color: rgb(202, 201, 201);
 }
 
 .form__button {
@@ -296,6 +302,14 @@ section {
     color: #a29bfe;
     text-align: center;
 }
+
 main {
     flex: 1;
+}
+
+.form__checkbox {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    align-items: center;
 }

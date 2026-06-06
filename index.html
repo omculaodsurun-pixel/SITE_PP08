@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameSadyg — Маркетплейс игр</title>
+    <!-- Подключение двух шрифтов -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+
+<!-- По умолчанию тёмная тема -->
+
+<body class="dark-theme">
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <!-- Логотип и название -->
+        <div class="header__logo">
+            <img src="images/logotip.svg" alt="Логотип GameSadyg">
+            <span class="header__title">GameSadyg</span>
+        </div>
+
+        <!-- Кнопка бургера (мобильная версия) -->
+        <div class="header__burger" id="burger">
+            ☰
+        </div>
+
+        <!-- Навигация -->
+        <nav class="header__nav" id="nav">
+            <a href="#search" class="header__link">Поиск</a>
+            <a href="catalog.html" class="header__link">Каталог</a>
+            <a href="profile.html" class="header__link">Личный кабинет</a>
+            <a href="login.html" class="header__link header__link--button">Войти</a>
+        </nav>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- ===== Слайдер новинок ===== -->
+        <section class="slider">
+
+            <div class="slider__wrapper">
+
+                <div class="slider__slide active">
+                    <img src="images/arc-raiders.jpg" alt="Arc Raiders">
+                    <h2 class="slider__title">Arc Raiders</h2>
+                    <p class="slider__price">1499 ₽</p>
+                    <a href="catalog.html" class="button">Подробнее</a>
+                </div>
+
+                <div class="slider__slide">
+                    <img src="images/ELDEN RING NIGHTREIGN.jpg" alt="Elden Ring">
+                    <h2 class="slider__title">Elden Ring</h2>
+                    <p class="slider__price">1999 ₽</p>
+                    <a href="catalog.html" class="button">Подробнее</a>
+                </div>
+
+                <div class="slider__slide">
+                    <img src="images/Manor Lords.jpg" alt="Manor Lords">
+                    <h2 class="slider__title">Manor Lords</h2>
+                    <p class=" slider__price">999 ₽</p>
+                    <a href="catalog.html" class="button">Подробнее</a>
+                </div>
+
+            </div>
+
+            <!-- Индикаторы слайдов -->
+            <div class="slider__dots">
+                <span class="slider__dot active"></span>
+                <span class="slider__dot"></span>
+                <span class="slider__dot"></span>
+            </div>
+
+        </section>
+
+        <!-- ===== Быстрый поиск ===== -->
+        <section class="search" id="search">
+            <h2 class="section-title">Быстрый поиск по жанрам</h2>
+
+            <div class="search__box">
+                <input type="text" class="search__input" placeholder="Введите жанр (RPG, Action...)">
+                <button class="button">Найти</button>
+                <div class="genres-grid">
+                    <div class="genre-item">Экшн</div>
+                    <div class="genre-item">РПГ</div>
+                    <div class="genre-item">Стратегии</div>
+                    <div class="genre-item">Приключения</div>
+                    <div class="genre-item">Хорроры</div>
+                    <div class="genre-item">Симуляторы</div>
+                    <div class="genre-item">Шутеры</div>
+                    <div class="genre-item">Гонки</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Преимущества ===== -->
+        <section class="advantages">
+            <h2 class="section-title">Преимущества GameSadyg</h2>
+
+            <div class="advantages__list">
+
+                <div class="advantages__item">
+                    <img src="images/dengi.svg" alt="Цена">
+                    <p>Привлекательные цены</p>
+                </div>
+
+                <div class="advantages__item">
+                    <img src="images/akciya.svg" alt="Акции">
+                    <p>Ежемесячные акции</p>
+                </div>
+
+                <div class="advantages__item">
+                    <img src="images/podderzhka.svg" alt="Поддержка">
+                    <p>Круглосуточная поддержка</p>
+                </div>
+
+                <div class="advantages__item">
+                    <img src="images/bystraya_dostavka.svg" alt="Быстрая покупка">
+                    <p>Быстрая покупка</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer__contacts">
+            <p>Телефон: 8-394-223-07-07</p>
+            <p>Email: sadyg@games.ru</p>
+        </div>
+
+        <div class="footer__nav">
+            <a href="index.html">Главная</a>
+            <a href="register.html">Регистрация</a>
+            <a href="login.html">Авторизация</a>
+            <a href="profile.html">Личный кабинет</a>
+            <a href="#search">Поиск</a>
+        </div>
+
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+/* =====================================
+   ПЛАНШЕТНАЯ ВЕРСИЯ от 768px
+===================================== */
+@media (min-width: 768px) {
+   /* 1️ меню становится горизонтальным*/
+    .header__nav {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    /* 2️ бургер скрывается */
+    .header__burger {
+        display: none;
+    }
+
+    /* 3️ преимущества становятся в 2 колонки */
+    .advantages__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .advantages__item {
+        width: 40%;
+    }
+
+    /* 4️ поиск становится в строку */
+    .search__box {
+        flex-direction: row;
+    }
+
+    .search__input {
+        flex: 1;
+    }
+}
+
+/* =====================================
+   ДЕСКТОПНАЯ ВЕРСИЯ от 1200px
+===================================== */
+@media (min-width: 1200px) {
+
+    /* 5️ увеличиваем отступы */
+    section {
+        padding: 80px 100px;
+    }
+
+    /* 6️ преимущества в 4 колонки */
+    .advantages__item {
+        width: 20%;
+    }
+
+    /* 7️ слайдер увеличивается */
+    .slider__slide img {
+        max-width: 500px;
+    }
+
+    /*8️ увеличиваем размер заголовков */
+    .section-title {
+        font-size: 32px;
+    }
+}

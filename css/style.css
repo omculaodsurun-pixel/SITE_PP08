@@ -1,0 +1,195 @@
+/* =============================
+    ОСНОВНЫЕ СТИЛИ
+============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =============================
+   ОБЩИЕ ЭЛЕМЕНТЫ
+============================= */
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #a617ff 0%, #6359e3 50%, #5bcbfa 100%);
+    border-radius: 8px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: #4834d4;
+}
+
+/* =============================
+   HEADER
+============================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1e1e1e;
+    position: relative;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__logo img {
+    height: 40px;
+}
+
+.header__title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header__burger {
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.header__nav {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header__nav.active {
+    display: flex;
+}
+
+.header__link--button {
+    background-color: #6c5ce7;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+/* =============================
+   СЛАЙДЕР
+============================= */
+
+.slider__slide {
+    display: none;
+}
+
+.slider__slide.active {
+    display: block;
+}
+
+.slider__slide img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.slider__price {
+    margin: 10px 0;
+    color: #a29bfe;
+}
+
+.slider__dot {
+    width: 12px;
+    height: 12px;
+    background-color: #555;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.slider__dot.active {
+    background-color: #6c5ce7;
+}
+
+/* =============================
+   ПОИСК
+============================= */
+
+.search__box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search__input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* =============================
+   ПРЕИМУЩЕСТВА
+============================= */
+
+.advantages__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.advantages__item img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+.footer {
+    background-color: #1e1e1e;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}

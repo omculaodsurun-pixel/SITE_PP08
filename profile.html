@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — GameSadyg</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/light.css">
+</head>
+
+<body class="dark-theme">
+
+<header class="header">
+    <div class="header__logo">
+        <img src="images/logotip.svg" alt="Логотип GameSadyg">
+        <span class="header__title">GameSadyg</span>
+    </div>
+
+    <nav class="header__nav active">
+        <a href="index.html" class="header__link">Главная</a>
+        <a href="catalog.html" class="header__link">Каталог</a>
+        <a href="login.html" class="header__link">Выйти</a>
+    </nav>
+</header> 
+
+<main class="profile">
+
+    <h2 class="section-title">Личный кабинет</h2>
+
+    <!-- ===== Информация о пользователе ===== -->
+    <section class="profile__info">
+        <h3>Информация о пользователе</h3>
+
+        <p><strong>E-mail:</strong> ivanov@example.com</p>
+        <p><strong>Фамилия:</strong> Иванов</p>
+        <p><strong>Имя:</strong> Иван</p>
+        <p><strong>Дата рождения:</strong> 15.05.1995</p>
+        <p><strong>Телефон:</strong> +7 999 123 45 67</p>
+        <h4>Внимание: Все указанные данные защищены нашей системой безопасности и используются только для предоставления качественных услуг.</h4>
+    </section>
+
+    <!-- ===== История покупок ===== -->
+    <section class="profile__history">
+        <h3>История покупок</h3>
+
+        <div class="profile__purchase">
+            <p>Дата: 13.06.2026</p>
+            <p>Игра: Bodycam</p>
+            <p>Стоимость: 499 ₽</p>
+        </div>
+
+        <div class="profile__purchase">
+            <p>Дата: 13.06.2026</p>
+            <p>Игра: It Takes Two</p>
+            <p>Стоимость: 2299 ₽</p>
+        </div>
+    </section>
+
+    <!-- ===== Настройки ===== -->
+    <section class="profile__settings">
+        <h3>Настройки профиля</h3>
+
+        <button class="button">Сменить пароль</button>
+
+        <div class="profile__theme">
+            <label>
+                <input type="checkbox" id="themeToggle">
+                Светлая тема
+            </label>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 GameSadyg</p>
+</footer>
+
+<script src="js/theme.js"></script>
+
+</body>
+</html>

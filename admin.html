@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Административная панель — GameSadyg</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+
+<body class="dark-theme">
+
+<header class="header">
+    <div class="header__logo">
+        <img src="images/logotip.svg" alt="Логотип GameSadyg">
+        <span class="header__title">GameSadyg</span>
+    </div>
+
+    <nav class="header__nav active">
+        <a href="index.html" class="header__link">Главная</a>
+        <a href="catalog.html" class="header__link">Каталог</a>
+        <a href="profile.html" class="header__link">Профиль</a>
+    </nav>
+</header>
+
+<main class="admin">
+
+    <h2 class="section-title">Административная панель</h2>
+
+    <section class="admin__form-wrapper">
+
+        <form class="form">
+
+            <label class="form__label">Название игры</label>
+            <input type="text" class="form__input" required>
+
+            <label class="form__label">Жанр</label>
+            <input type="text" class="form__input" required>
+
+            <label class="form__label">Изображение</label>
+            <input type="file" class="form__input" accept="image/*" required>
+
+            <label class="form__label">Компания-разработчик</label>
+            <input type="text" class="form__input" required>
+
+            <label class="form__label">Описание</label>
+            <textarea class="form__input admin__textarea" rows="4" required></textarea>
+
+            <label class="form__label">Стоимость (₽)</label>
+            <input type="number" class="form__input" required>
+
+            <button type="submit" class="button form__button">
+                Добавить
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 GameSadyg</p>
+</footer>
+
+</body>
+</html>

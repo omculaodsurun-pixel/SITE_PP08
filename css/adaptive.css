@@ -45,8 +45,29 @@
         justify-content: center;
     }
 
-    .card {
+    .popular__grid .card {
         width: 45%;
+    }
+
+    .catalog__content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .catalog__filter {
+        display: flex !important;
+        width: 220px;
+    }
+
+    .catalog__grid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .catalog__filter-toggle {
+        display: none;
     }
 }
 
@@ -75,7 +96,7 @@
         font-size: 32px;
     }
 
-    .card {
-        width: 18%;
+    .catalog__grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

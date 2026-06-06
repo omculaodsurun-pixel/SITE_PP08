@@ -363,3 +363,88 @@ main {
 .profile__theme {
     margin-top: 10px;
 }
+
+/* =============================
+   АДМИНИСТРАТИВНАЯ ПАНЕЛЬ
+============================= */
+
+.admin {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.admin__form-wrapper {
+    margin-top: 30px;
+}
+
+.admin__textarea {
+    resize: none;
+}
+
+/* =============================
+   КАТАЛОГ
+============================= */
+
+.catalog {
+    padding: 50px 20px;
+}
+
+.catalog__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.catalog__filter {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.catalog__filter.active {
+    display: flex;
+}
+
+.filter__btn {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.catalog__grid {
+    width: 100%;
+}
+
+.card__description {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #cccccc;
+}
+
+.card__genre,
+.card__developer {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #cccccc;
+}
+
+.card__rating {
+    color: gold;
+    margin: 10px 0;
+}
+
+.card__description {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.card.active .card__description {
+    display: block;
+}

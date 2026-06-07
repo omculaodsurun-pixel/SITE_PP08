@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Административная панель — GameSadyg</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
+    <title>Админ-панель - GameSadyg</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light.css">
     <link rel="stylesheet" href="css/adaptive.css">
 </head>
 
-<body class="dark-theme">
+<body>
+    <!-- Интерфейс администратора для добавления карточек игр. -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="header__logo"><img src="images/logotip.svg"
+                    alt="Логотип"><span>GameSadyg</span></a>
+            <div class="header__burger" id="burger">☰</div>
+            <nav class="header__nav" id="nav">
+                <a href="index.html" class="header__link">Главная</a>
+                <a href="catalog.html" class="header__link">Каталог</a>
+                <a href="profile.html" class="header__link">Профиль</a>
+                <button class="button button--small" id="themeToggle" type="button">Светлая тема</button>
+            </nav>
+        </div>
+    </header>
 
-<header class="header">
-    <div class="header__logo">
-        <img src="images/logotip.svg" alt="Логотип GameSadyg">
-        <span class="header__title">GameSadyg</span>
-    </div>
+    <main>
+        <section class="hero hero--catalog">
+            <div class="container hero__content reveal visible">
+                <h1 class="hero__brand">Админ</h1>
+                <h2 class="hero__title">Управление карточками игр</h2>
+                <p class="hero__text">Добавляйте новые позиции в каталог и поддерживайте маркетплейс в актуальном
+                    состоянии.</p>
+            </div>
+        </section>
 
-    <nav class="header__nav active">
-        <a href="index.html" class="header__link">Главная</a>
-        <a href="catalog.html" class="header__link">Каталог</a>
-        <a href="profile.html" class="header__link">Профиль</a>
-    </nav>
-</header>
+        <section class="auth reveal">
+            <div class="container">
+                <form class="form" style="width:min(680px,100%);">
+                    <h2 class="section-title" style="text-align:left; margin-bottom:0.25rem;">Добавить игру</h2>
+                    <label class="form__label">Название игры</label>
+                    <input type="text" class="form__input" required>
+                    <label class="form__label">Жанр</label>
+                    <input type="text" class="form__input" required>
+                    <label class="form__label">Изображение</label>
+                    <input type="file" class="form__input" accept="image/*" required>
+                    <label class="form__label">Компания-разработчик</label>
+                    <input type="text" class="form__input" required>
+                    <label class="form__label">Описание</label>
+                    <textarea class="form__textarea" rows="4" required></textarea>
+                    <label class="form__label">Стоимость (₽)</label>
+                    <input type="number" class="form__input" required>
+                    <button class="button" type="submit">Добавить</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-<main class="admin">
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© <span class="js-year"></span> GameSadyg</p>
+            <nav class="footer__nav"><a href="catalog.html">Каталог</a><a href="profile.html">Профиль</a></nav>
+        </div>
+    </footer>
 
-    <h2 class="section-title">Административная панель</h2>
-
-    <section class="admin__form-wrapper">
-
-        <form class="form">
-
-            <label class="form__label">Название игры</label>
-            <input type="text" class="form__input" required>
-
-            <label class="form__label">Жанр</label>
-            <input type="text" class="form__input" required>
-
-            <label class="form__label">Изображение</label>
-            <input type="file" class="form__input" accept="image/*" required>
-
-            <label class="form__label">Компания-разработчик</label>
-            <input type="text" class="form__input" required>
-
-            <label class="form__label">Описание</label>
-            <textarea class="form__input admin__textarea" rows="4" required></textarea>
-
-            <label class="form__label">Стоимость (₽)</label>
-            <input type="number" class="form__input" required>
-
-            <button type="submit" class="button form__button">
-                Добавить
-            </button>
-
-        </form>
-
-    </section>
-
-</main>
-
-<footer class="footer">
-    <p>© 2026 GameSadyg</p>
-</footer>
-
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
 </body>
+
 </html>

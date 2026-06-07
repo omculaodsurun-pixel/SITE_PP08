@@ -4,219 +4,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог игр — GameSadyg</title>
-
+    <title>Каталог - GameSadyg</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light.css">
     <link rel="stylesheet" href="css/adaptive.css">
 </head>
 
-<body class="dark-theme">
-
+<body>
+    <!-- Хедер каталога с кнопкой темы и ссылкой в админ-панель. -->
     <header class="header">
-        <div class="header__logo">
-            <img src="images/logotip.svg" alt="Логотип GameSadyg">
-            <span class="header__title">GameSadyg</span>
+        <div class="container header__inner">
+            <a href="index.html" class="header__logo"><img src="images/logotip.svg"
+                    alt="Логотип"><span>GameSadyg</span></a>
+            <div class="header__burger" id="burger">☰</div>
+            <nav class="header__nav" id="nav">
+                <a href="index.html" class="header__link">Главная</a>
+                <a href="profile.html" class="header__link">Профиль</a>
+                <a href="admin.html" class="header__link">Админ</a>
+                <button class="button button--small" id="themeToggle" type="button">Светлая тема</button>
+            </nav>
         </div>
-
-        <nav class="header__nav active">
-            <a href="index.html" class="header__link">Главная</a>
-            <a href="profile.html" class="header__link">Профиль</a>
-            <a href="admin.html" class="header__link">Админ</a>
-        </nav>
     </header>
 
-    <main class="catalog">
+    <main>
+        <section class="hero hero--catalog">
+            <div class="container hero__content reveal visible">
+                <h1 class="hero__brand">Каталог</h1>
+                <h2 class="hero__title">Игры для игроков, команд и кибер-турниров</h2>
+                <p class="hero__text">Фильтруйте по жанрам, открывайте описание и переходите к покупке без лишних шагов.
+                </p>
+            </div>
+        </section>
 
-        <h2 class="section-title">Каталог игр</h2>
+        <section class="section reveal">
+            <div class="container">
+                <h2 class="section-title">Все игры</h2>
+                <button class="button catalog__filter-toggle" id="filterToggle" type="button">Фильтр по жанрам</button>
+                <div class="catalog__layout">
+                    <!-- Жанровый фильтр, который управляется через catalog.js. -->
+                    <aside class="catalog__filter" id="filterPanel">
+                        <h3>Жанры</h3>
+                        <div class="catalog__filter-list">
+                            <button class="filter__btn active" data-genre="all">Все</button>
+                            <button class="filter__btn" data-genre="RPG">RPG</button>
+                            <button class="filter__btn" data-genre="Action">Action</button>
+                            <button class="filter__btn" data-genre="Strategy">Strategy</button>
+                            <button class="filter__btn" data-genre="Horror">Horror</button>
+                            <button class="filter__btn" data-genre="Adventure">Adventure</button>
+                            <button class="filter__btn" data-genre="Survival">Survival</button>
+                        </div>
+                    </aside>
 
-        <!-- Кнопка фильтра для мобильной версии -->
-        <button class="button catalog__filter-toggle" id="filterToggle">
-            Фильтр по жанрам
-        </button>
+                    <!-- Карточки игр, включая недостающие позиции с главной страницы. -->
+                    <section class="catalog__grid">
+                        <article class="card" data-genre="Action"><img src="images/arc-raiders.jpg" alt="Arc Raiders"
+                                class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Arc Raiders</h3>
+                                <p class="card__genre">Жанр: Action</p>
+                                <p class="card__developer">Разработчик: Embark Studios</p>
+                                <div class="card__rating">★★★★☆</div>
+                                <p class="card__price">1499 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Кооперативный PvPvE-экшен в научно-фантастическом мире.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="RPG"><img src="images/ELDEN RING NIGHTREIGN.jpg"
+                                alt="Elden Ring" class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Elden Ring</h3>
+                                <p class="card__genre">Жанр: RPG</p>
+                                <p class="card__developer">Разработчик: FromSoftware</p>
+                                <div class="card__rating">★★★★★</div>
+                                <p class="card__price">1999 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Эпическая action-RPG с открытым миром и сложными боссами.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Strategy"><img src="images/Manor Lords.jpg" alt="Manor Lords"
+                                class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Manor Lords</h3>
+                                <p class="card__genre">Жанр: Strategy</p>
+                                <p class="card__developer">Разработчик: Slavic Magic</p>
+                                <div class="card__rating">★★★★☆</div>
+                                <p class="card__price">999 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Средневековая стратегия с реалистичным градостроительством.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="RPG"><img src="images/Ashes of Creation.jpg"
+                                alt="Ashes of Creation" class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Ashes of Creation</h3>
+                                <p class="card__genre">Жанр: RPG</p>
+                                <p class="card__developer">Разработчик: Intrepid Studios</p>
+                                <div class="card__rating">★★★★☆</div>
+                                <p class="card__price">2499 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">MMORPG с динамически изменяющимся миром.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Horror"><img src="images/Bodycam.jpg" alt="Bodycam"
+                                class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Bodycam</h3>
+                                <p class="card__genre">Жанр: Horror</p>
+                                <p class="card__developer">Разработчик: Control Freaks</p>
+                                <div class="card__rating">★★★★★</div>
+                                <p class="card__price">499 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Психологический хоррор с эффектом полного присутствия.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Adventure"><img src="images/It Takes Two.jpg"
+                                alt="It Takes Two" class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">It Takes Two</h3>
+                                <p class="card__genre">Жанр: Adventure</p>
+                                <p class="card__developer">Разработчик: Hazelight Studios</p>
+                                <div class="card__rating">★★★★☆</div>
+                                <p class="card__price">2299 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Кооперативное приключение для двух игроков.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Survival"><img src="images/rust.jpg" alt="rust"
+                                class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Rust</h3>
+                                <p class="card__genre">Жанр: Survival</p>
+                                <p class="card__developer">Разработчик: Facepunch Studios</p>
+                                <div class="card__rating">★★★★☆</div>
+                                <p class="card__price">1099 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Многопользовательская компьютерная игра в жанре симулятора
+                                    выживания с элементами PvP</p>
+                            </div>
+                        </article>
 
-        <div class="catalog__content">
-
-            <!-- ===== Фильтр ===== -->
-            <aside class="catalog__filter" id="filter">
-
-                <h3>Жанры</h3>
-
-                <button class="filter__btn" data-genre="all">Все</button>
-                <button class="filter__btn" data-genre="RPG">RPG</button>
-                <button class="filter__btn" data-genre="Action">Action</button>
-                <button class="filter__btn" data-genre="Strategy">Strategy</button>
-                <button class="filter__btn" data-genre="Horror">Horror</button>
-                <button class="filter__btn" data-genre="Adventure">Adventure</button>
-                <button class="filter__btn" data-genre="Survival">Survival</button>
-            </aside>
-
-            <!-- ===== Игры ===== -->
-            <section class="catalog__grid">
-
-                <!-- Arc Raiders -->
-                <article class="card" data-genre="Action">
-                    <img src="images/arc-raiders.jpg" alt="Arc Raiders" class="card__image">
-                    <h3 class="card__title">Arc Raiders</h3>
-                    <p class="card__genre">Жанр: Action</p>
-                    <p class="card__developer">Разработчик: Embark Studios</p>
-                    <div class="card__rating">★★★★☆</div>
-                    <p class="card__price">1499 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Кооперативный PvPvE‑экшен в научно‑фантастическом мире, где игроки сражаются с механическими
-                        захватчиками и другими командами за ресурсы.
-                    </div>
-                </article>
-
-                <!-- Elden Ring -->
-                <article class="card" data-genre="RPG">
-                    <img src="images/ELDEN RING NIGHTREIGN.jpg" alt="Elden Ring" class="card__image">
-                    <h3 class="card__title">Elden Ring</h3>
-                    <p class="card__genre">Жанр: RPG</p>
-                    <p class="card__developer">Разработчик: FromSoftware</p>
-                    <div class="card__rating">★★★★★</div>
-                    <p class="card__price">1999 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Эпическая action‑RPG с открытым миром, сложными боссами и глубокой боевой системой в мрачной
-                        фэнтезийной вселенной.
-                    </div>
-                </article>
-
-                <!-- Manor Lords -->
-                <article class="card" data-genre="Strategy">
-                    <img src="images/Manor Lords.jpg" alt="Manor Lords" class="card__image">
-                    <h3 class="card__title">Manor Lords</h3>
-                    <p class="card__genre">Жанр: Strategy</p>
-                    <p class="card__developer">Разработчик: Slavic Magic</p>
-                    <div class="card__rating">★★★★☆</div>
-                    <p class="card__price">999 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Средневековая стратегия с реалистичным градостроительством и масштабными тактическими
-                        сражениями.
-                    </div>
-                </article>
-
-                <!-- Ashes of Creation -->
-                <article class="card" data-genre="RPG">
-                    <img src="images/Ashes of Creation.jpg" alt="Ashes of Creation" class="card__image">
-                    <h3 class="card__title">Ashes of Creation</h3>
-                    <p class="card__genre">Жанр: RPG</p>
-                    <p class="card__developer">Разработчик: Intrepid Studios</p>
-                    <div class="card__rating">★★★★☆</div>
-                    <p class="card__price">2499 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        MMORPG с динамически изменяющимся миром, где действия игроков влияют на экономику, города и
-                        политическую систему.
-                    </div>
-                </article>
-
-                <!-- Baldur's Gate 3 -->
-                <article class="card" data-genre="RPG">
-                    <img src="images/Baldur's Gate 3.jpg" alt="Baldur's Gate 3" class="card__image">
-                    <h3 class="card__title">Baldur's Gate 3</h3>
-                    <p class="card__genre">Жанр: RPG</p>
-                    <p class="card__developer">Разработчик: Larian Studios</p>
-                    <div class="card__rating">★★★★★</div>
-                    <p class="card__price">2099 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Ролевая игра во вселенной Dungeons & Dragons с нелинейным сюжетом, глубокими диалогами и
-                        тактическими боями.
-                    </div>
-                </article>
-
-                <!-- Assassin’s Creed Shadows -->
-                <article class="card" data-genre="Action">
-                    <img src="images/Assassin’s Creed Shadows.jpg" alt="Assassin's Creed Shadows" class="card__image">
-                    <h3 class="card__title">Assassin's Creed Shadows</h3>
-                    <p class="card__genre">Жанр: Action</p>
-                    <p class="card__developer">Разработчик: Ubisoft</p>
-                    <div class="card__rating">★★★☆☆</div>
-                    <p class="card__price">1799 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Экшен с открытым миром в феодальной Японии, сочетающий скрытность, исследование и динамичные
-                        сражения.
-                    </div>
-                </article>
-
-                <!-- Clair Obscur Expedition 33 -->
-                <article class="card" data-genre="Horror">
-                    <img src="images/Clair Obscur Expedition 33.jpg" alt="Clair Obscur Expedition 33"
-                        class="card__image">
-                    <h3 class="card__title">Clair Obscur Expedition 33</h3>
-                    <p class="card__genre">Жанр: Horror</p>
-                    <p class="card__developer">Разработчик: Iceberg Interactive</p>
-                    <div class="card__rating">★★★★☆</div>
-                    <p class="card__price">999 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Атмосферный survival horror с мрачной эстетикой и напряжённой боевой системой.
-                    </div>
-                </article>
-
-                <!-- Bodycam -->
-                <article class="card" data-genre="Horror">
-                    <img src="images/Bodycam.jpg" alt="Bodycam" class="card__image">
-                    <h3 class="card__title">Bodycam</h3>
-                    <p class="card__genre">Жанр: Horror</p>
-                    <p class="card__developer">Разработчик: Control Freaks</p>
-                    <div class="card__rating">★★★★★</div>
-                    <p class="card__price">499 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Реалистичный психологический хоррор с видом от первого лица и эффектом присутствия.
-                    </div>
-                </article>
-
-                <!-- It Takes Two -->
-                <article class="card" data-genre="Adventure">
-                    <img src="images/It Takes Two.jpg" alt="It Takes Two" class="card__image">
-                    <h3 class="card__title">It Takes Two</h3>
-                    <p class="card__genre">Жанр: Adventure</p>
-                    <p class="card__developer">Разработчик: Hazelight Studios</p>
-                    <div class="card__rating">★★★★☆</div>
-                    <p class="card__price">2299 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Кооперативное приключение для двух игроков с уникальными механиками и эмоциональной историей.
-                    </div>
-                </article>
-
-                <!-- Rust -->
-                <article class="card" data-genre="Survival">
-                    <img src="images/rust.jpg" alt="Rust" class="card__image">
-                    <h3 class="card__title">Rust</h3>
-                    <p class="card__genre">Жанр: Survival</p>
-                    <p class="card__developer">Разработчик: Facepunch Studios</p>
-                    <div class="card__rating">★★★★★</div>
-                    <p class="card__price">1199 ₽</p>
-                    <button class="button card__toggle">Подробнее</button>
-                    <div class="card__description">
-                        Многопользовательский survival‑sandbox, где игроки добывают ресурсы, строят базы и выживают в
-                        опасном мире.
-                    </div>
-                </article>
-
-            </section>
-
-        </div>
-
+                        <article class="card" data-genre="RPG"><img src="images/Baldur's Gate 3.jpg"
+                                alt="Baldur's Gate 3" class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Baldur's Gate 3</h3>
+                                <p class="card__genre">Жанр: RPG</p>
+                                <p class="card__developer">Разработчик: Larian Studios</p>
+                                <div class="card__rating">★★★★★</div>
+                                <p class="card__price">2099 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Пошаговая RPG по Dungeons & Dragons с нелинейным сюжетом и
+                                    глубокой партийной тактикой.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Action"><img src="images/Assassin’s Creed Shadows.jpg"
+                                alt="Assassin's Creed Shadows" class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Assassin's Creed Shadows</h3>
+                                <p class="card__genre">Жанр: Action</p>
+                                <p class="card__developer">Разработчик: Ubisoft</p>
+                                <div class="card__rating">★★★☆☆</div>
+                                <p class="card__price">1790 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Стелс-экшен в феодальной Японии с двумя стилями прохождения и
+                                    исследованием открытого мира.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Survival"><img src="images/Fallout 76.jpg" alt="Fallout 76"
+                                class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Fallout 76</h3>
+                                <p class="card__genre">Жанр: Survival</p>
+                                <p class="card__developer">Разработчик: Bethesda Game Studios</p>
+                                <div class="card__rating">★★★☆☆</div>
+                                <p class="card__price">1500 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Онлайн-ответвление Fallout: выживание, строительство базы и
+                                    совместные события в постапокалиптической Аппалачии.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Survival"><img src="images/sabnautica.jpg" alt="Subnautica"
+                                class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Subnautica</h3>
+                                <p class="card__genre">Жанр: Survival</p>
+                                <p class="card__developer">Разработчик: Unknown Worlds Entertainment</p>
+                                <div class="card__rating">★★★★★</div>
+                                <p class="card__price">899 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Подводное приключение на чужой планете с крафтом, исследованием
+                                    биомов и борьбой за ресурсы.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Adventure"><img src="images/Escape Simulator.jpg"
+                                alt="Escape Simulator" class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Escape Simulator</h3>
+                                <p class="card__genre">Жанр: Adventure</p>
+                                <p class="card__developer">Разработчик: FunTrainer</p>
+                                <div class="card__rating">★★★★★</div>
+                                <p class="card__price">699 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Кооперативные комнаты-побеги с физическими головоломками,
+                                    интерактивными предметами и редактором уровней.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="Strategy"><img src="images/Crusader Kings III.jpg"
+                                alt="Crusader Kings III" class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Crusader Kings III</h3>
+                                <p class="card__genre">Жанр: Strategy</p>
+                                <p class="card__developer">Разработчик: Paradox Development Studio</p>
+                                <div class="card__rating">★★★★☆</div>
+                                <p class="card__price">2000 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Глобальная стратегия о династиях, дипломатии и войнах за власть
+                                    в средневековом мире.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="RPG"><img src="images/cyberpunk.jpg" alt="Cyberpunk 2077"
+                                class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Cyberpunk 2077</h3>
+                                <p class="card__genre">Жанр: RPG</p>
+                                <p class="card__developer">Разработчик: CD Projekt RED</p>
+                                <div class="card__rating">★★★★☆</div>
+                                <p class="card__price">1800 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Сюжетная action-RPG в Найт-Сити с прокачкой имплантов и выбором,
+                                    влияющим на развитие истории.</p>
+                            </div>
+                        </article>
+                        <article class="card" data-genre="RPG"><img src="images/Diablo IV.jpg" alt="Diablo IV"
+                                class="card__image">
+                            <div class="card__body">
+                                <h3 class="card__title">Diablo IV</h3>
+                                <p class="card__genre">Жанр: RPG</p>
+                                <p class="card__developer">Разработчик: Blizzard Entertainment</p>
+                                <div class="card__rating">★★★★★</div>
+                                <p class="card__price">3799 ₽</p><button class="button button--small card__toggle"
+                                    type="button">Подробнее</button>
+                                <p class="card__description">Мрачная hack-and-slash RPG с открытыми регионами, сезонным
+                                    контентом и кооперативными активностями.</p>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>© 2026 GameSadyg</p>
+        <div class="container footer__inner">
+            <p>© <span class="js-year"></span> GameSadyg</p>
+            <nav class="footer__nav"><a href="index.html">Главная</a><a href="register.html">Регистрация</a><a
+                    href="login.html">Вход</a></nav>
+        </div>
     </footer>
-
+    <script src="js/main.js"></script>
     <script src="js/catalog.js"></script>
-
+    <script src="js/theme.js"></script>
 </body>
 
 </html>

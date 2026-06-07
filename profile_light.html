@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профиль - GameSadyg</title>
+    <title>Профиль - GameSadyg (Светлая тема)</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,17 @@
     <link rel="stylesheet" href="css/adaptive.css">
 </head>
 
-<body>
-    <!-- Личный кабинет пользователя. -->
+<body class="light-theme">
+    <!-- Светлая версия страницы личного кабинета. -->
     <header class="header">
         <div class="container header__inner">
-            <a href="index.html" class="header__logo"><img src="images/logotip.svg"
+            <a href="index_light.html" class="header__logo"><img src="images/logotip.svg"
                     alt="Логотип"><span>GameSadyg</span></a>
             <div class="header__burger" id="burger">☰</div>
             <nav class="header__nav" id="nav">
-                <a href="index.html" class="header__link">Главная</a>
+                <a href="index_light.html" class="header__link">Главная</a>
                 <a href="catalog.html" class="header__link">Каталог</a>
                 <a href="login.html" class="header__link">Выйти</a>
-                <button class="button button--small" id="themeToggle" type="button">Светлая тема</button>
             </nav>
         </div>
     </header>
@@ -37,7 +36,7 @@
             <div class="container hero__content reveal visible">
                 <h1 class="hero__brand">Профиль</h1>
                 <h2 class="hero__title">Ваш центр управления аккаунтом</h2>
-                <p class="hero__text">История покупок, личные данные и быстрые действия собраны в удобной структуре.</p>
+                <p class="hero__text">Светлая версия личного кабинета для комфортного дневного использования.</p>
             </div>
         </section>
 
@@ -72,8 +71,8 @@
                         <br><br>
                         <a href="admin.html" class="button button--small">Перейти в админ-панель</a>
                         <br><br>
-                        <!-- Отдельная кнопка для перехода на светлую -->
-                        <a href="profile_light.html" class="button button--small">Светлая тема</a>
+                        <!-- Кнопка обратного перехода на темную -->
+                        <a href="profile.html" class="button button--small">Темная тема</a>
                     </section>
                 </div>
             </div>
@@ -88,7 +87,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
 </body>
 
 </html>

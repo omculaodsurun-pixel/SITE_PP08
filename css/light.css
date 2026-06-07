@@ -1,26 +1,80 @@
-.light-theme {
-    background-color: #f5f5f5;
-    color: #000000;
+/* Переопределение переменных и базовых слоев для светлой темы. */
+body.light-theme {
+    --bg: #f5f8ff;
+    --surface: #ffffff;
+    --surface-2: #f0f4ff;
+    --text: #0f172a;
+    --muted: #5d6a86;
+    --line: rgba(43, 66, 145, 0.22);
+    --accent: #6b4fff;
+    --accent-2: #1f9eff;
+    --success: #078a62;
+    background: radial-gradient(circle at 10% 14%, #dfe9ff 0%, #f5f8ff 45%), var(--bg);
 }
 
-/* Хедер и футер */
-.light-theme .header,
+.light-theme .header {
+    background: rgba(245, 248, 255, 0.82);
+}
+
+.light-theme .header__logo img {
+    filter: none;
+}
+
+.light-theme .button--ghost {
+    border-color: #8090b6;
+}
+
+.light-theme .hero::after {
+    background: radial-gradient(circle at 72% 26%, rgba(31, 158, 255, 0.18), transparent 48%);
+}
+
+.light-theme .hero--home::before {
+    background-image: linear-gradient(rgba(245, 248, 255, 0.24), rgba(245, 248, 255, 0.76)), url("../images/arc-raiders.jpg");
+}
+
+.light-theme .hero--catalog::before {
+    background-image: linear-gradient(rgba(245, 248, 255, 0.3), rgba(245, 248, 255, 0.8)), url("../images/Baldur's Gate 3.jpg");
+}
+
+.light-theme .hero--profile::before {
+    background-image: linear-gradient(rgba(245, 248, 255, 0.3), rgba(245, 248, 255, 0.8)), url("../images/It Takes Two.jpg");
+}
+
+.light-theme .hero--auth::before {
+    background-image: linear-gradient(rgba(245, 248, 255, 0.3), rgba(245, 248, 255, 0.8)), url("../images/ELDEN RING NIGHTREIGN.jpg");
+}
+
+.light-theme .hero__text {
+    color: #30405f;
+}
+
+/* Для светлой темы контейнеры делают нейтральный фон без затемнения. */
+.light-theme .slider__wrapper,
+.light-theme .panel,
+.light-theme .form,
+.light-theme .catalog__filter,
+.light-theme .advantages__item,
+.light-theme .card {
+    background: var(--surface);
+}
+
+.light-theme .search__input,
+.light-theme .form__input,
+.light-theme .form__textarea,
+.light-theme .filter__btn {
+    background: var(--surface-2);
+}
+
+.light-theme .slider__slide img {
+    filter: brightness(0.9);
+}
+
+.light-theme .slider__title,
+.light-theme .slider__price {
+    color: #ffffff;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+}
+
 .light-theme .footer {
-    background-color: #e0e0e0;
-}
-
-/* Блоки профиля */
-.light-theme .profile section {
-    background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* История покупок */
-.light-theme .profile__purchase {
-    background-color: #f0f0f0;
-}
-
-/* Форма */
-.light-theme .form {
-    background-color: #ffffff;
+    background: var(--surface);
 }

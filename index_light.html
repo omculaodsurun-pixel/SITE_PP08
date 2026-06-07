@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameSadyg - Светлая тема</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+
+<body class="light-theme">
+    <!-- Отдельная светлая версия главной страницы. -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index_light.html" class="header__logo">
+                <img src="images/logotip.svg" alt="Логотип GameSadyg">
+                <span>GameSadyg</span>
+            </a>
+            <div class="header__burger" id="burger">☰</div>
+            <nav class="header__nav" id="nav">
+                <a href="catalog.html" class="header__link">Каталог</a>
+                <a href="profile.html" class="header__link">Профиль</a>
+                <a href="login.html" class="header__link">Войти</a>
+                <button class="button button--small" id="themeToggle" type="button">Темная тема</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--home">
+            <div class="container hero__content reveal visible">
+                <h1 class="hero__brand">GameSadyg</h1>
+                <h2 class="hero__title">Современный маркетплейс игр для вашего комьюнити</h2>
+                <p class="hero__text">Светлая версия для комфортного дневного просмотра с тем же удобным интерфейсом и
+                    акцентом на быстром выборе игр.</p>
+                <div class="hero__actions">
+                    <a href="catalog.html" class="button">Открыть каталог</a>
+                    <a href="#search" class="button button--ghost">Быстрый поиск</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контент светлой версии повторяет структуру основной главной. -->
+        <section class="slider section reveal">
+            <div class="container">
+                <h2 class="section-title">Новые релизы</h2>
+                <div class="slider__wrapper">
+                    <div class="slider__slide active">
+                        <img src="images/arc-raiders.jpg" alt="Arc Raiders">
+                        <div class="slider__meta">
+                            <h3 class="slider__title">Arc Raiders</h3>
+                            <p class="slider__price">1499 ₽</p><a href="catalog.html"
+                                class="button button--small">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img src="images/ELDEN RING NIGHTREIGN.jpg" alt="Elden Ring">
+                        <div class="slider__meta">
+                            <h3 class="slider__title">Elden Ring</h3>
+                            <p class="slider__price">1999 ₽</p><a href="catalog.html"
+                                class="button button--small">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <img src="images/Manor Lords.jpg" alt="Manor Lords">
+                        <div class="slider__meta">
+                            <h3 class="slider__title">Manor Lords</h3>
+                            <p class="slider__price">999 ₽</p><a href="catalog.html"
+                                class="button button--small">Подробнее</a>
+                        </div>
+                    </div>
+                    <button class="slider__btn slider__btn--prev" id="prevSlide" aria-label="Назад">&#10094;</button>
+                    <button class="slider__btn slider__btn--next" id="nextSlide" aria-label="Вперед">&#10095;</button>
+                </div>
+                <div class="slider__dots"><button class="slider__dot active"></button><button
+                        class="slider__dot"></button><button class="slider__dot"></button></div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="search">
+            <div class="container">
+                <h2 class="section-title">Быстрый поиск</h2>
+                <p class="section-subtitle">Введите жанр и сразу переходите к подходящим играм.</p>
+                <div class="search__box">
+                    <input type="text" class="search__input" placeholder="Введите жанр">
+                    <button class="button">Найти</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- На светлой версии оставляем полный блок популярных игр как на главной. -->
+        <section class="section reveal" id="popular">
+            <div class="container">
+                <h2 class="section-title">Популярные игры</h2>
+                <div class="popular__grid">
+                    <article class="card"><img src="images/Ashes of Creation.jpg" alt="Ashes of Creation"
+                            class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Ashes of Creation</h3>
+                            <p class="card__genre">Жанр: РПГ</p>
+                            <p class="card__developer">Разработчик: Intrepid Studios</p>
+                            <div class="card__rating">★★★★☆</div>
+                            <p class="card__price">2499 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                    <article class="card"><img src="images/Baldur's Gate 3.jpg" alt="Baldur's Gate 3"
+                            class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Baldur's Gate 3</h3>
+                            <p class="card__genre">Жанр: Ролевая</p>
+                            <p class="card__developer">Разработчик: Larian Studios</p>
+                            <div class="card__rating">★★★★★</div>
+                            <p class="card__price">2099 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                    <article class="card"><img src="images/Assassin’s Creed Shadows.jpg" alt="Assassin's Creed Shadows"
+                            class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Assassin's Creed Shadows</h3>
+                            <p class="card__genre">Жанр: Экшен</p>
+                            <p class="card__developer">Разработчик: Ubisoft</p>
+                            <div class="card__rating">★★★☆☆</div>
+                            <p class="card__price">1790 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                    <article class="card"><img src="images/Fallout 76.jpg" alt="Fallout 76" class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Fallout 76</h3>
+                            <p class="card__genre">Жанр: Выживание</p>
+                            <p class="card__developer">Разработчик: Bethesda Game Studios</p>
+                            <div class="card__rating">★★★☆☆</div>
+                            <p class="card__price">1500 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                    <article class="card"><img src="images/sabnautica.jpg" alt="Subnautica" class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Subnautica</h3>
+                            <p class="card__genre">Жанр: Выживание</p>
+                            <p class="card__developer">Разработчик: Unknown Worlds Entertainment</p>
+                            <div class="card__rating">★★★★★</div>
+                            <p class="card__price">899 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                    <article class="card"><img src="images/Escape Simulator.jpg" alt="Escape Simulator"
+                            class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Escape Simulator</h3>
+                            <p class="card__genre">Жанр: Escape Room Simulator </p>
+                            <p class="card__developer">Разработчик: FunTrainer</p>
+                            <div class="card__rating">★★★★★</div>
+                            <p class="card__price">699 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                    <article class="card"><img src="images/Crusader Kings III.jpg" alt="Crusader Kings III"
+                            class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Crusader Kings III</h3>
+                            <p class="card__genre">Жанр: Политическая пошаговая стратегия</p>
+                            <p class="card__developer">Разработчик: Paradox Development Studio</p>
+                            <div class="card__rating">★★★★☆</div>
+                            <p class="card__price">2000 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                    <article class="card"><img src="images/cyberpunk.jpg" alt="Cyberpunk 2077" class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Cyberpunk 2077</h3>
+                            <p class="card__genre">Жанр: Экшен-РПГ с открытым миром</p>
+                            <p class="card__developer">Разработчик: CD Projekt RED</p>
+                            <div class="card__rating">★★★★☆</div>
+                            <p class="card__price">1800 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                    <article class="card"><img src="images/Diablo IV.jpg" alt="Diablo IV" class="card__image">
+                        <div class="card__body">
+                            <h3 class="card__title">Diablo IV</h3>
+                            <p class="card__genre">Жанр: Action-RPG</p>
+                            <p class="card__developer">Разработчик: Blizzard Entertainment</p>
+                            <div class="card__rating">★★★★★</div>
+                            <p class="card__price">3799 ₽</p><a href="catalog.html" class="button button--small">В
+                                каталог</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок партнеров добавлен в светлую версию для полного соответствия главной. -->
+        <section class="section reveal" id="partners">
+            <div class="container">
+                <h2 class="section-title">Наши партнеры</h2>
+                <div class="partners__grid">
+                    <article class="partner-panel">
+                        <img src="images/Blizzard_Entertainment_Logo_2015.svg.png" alt="партнер1" class="partner-panel__logo">
+                    </article>
+                    <article class="partner-panel">
+                        <img src="images/Electronic_Arts_logo3.png" alt="партнера2" class="partner-panel__logo">
+                    </article>
+                    <article class="partner-panel">
+                        <img src="images/Playrix1 компания партнер.jpg" alt="партнера3" class="partner-panel__logo">
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© <span class="js-year"></span> GameSadyg</p>
+            <nav class="footer__nav">
+                <a href="index_light.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="profile.html">Профиль</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

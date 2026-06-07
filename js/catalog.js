@@ -1,35 +1,35 @@
-// ФИЛЬТР ПО ЖАНРАМ
-const buttons = document.querySelectorAll('.filter__btn');
-const cards = document.querySelectorAll('.catalog__grid .card');
-const filterToggle = document.getElementById('filterToggle');
-const filter = document.getElementById('filter');
-// Фильтрация
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
+// Элементы фильтрации каталога по жанрам.
+const filterButtons = document.querySelectorAll(".filter__btn");
+const catalogCards = document.querySelectorAll(".catalog__grid .card");
+const filterToggle = document.getElementById("filterToggle");
+const filterPanel = document.getElementById("filterPanel");
+
+// При выборе жанра показываем только карточки с совпадающим data-genre.
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
         const genre = button.dataset.genre;
 
-        cards.forEach(card => {
-            if (genre === "all" || card.dataset.genre === genre) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        catalogCards.forEach((card) => {
+            const visible = genre === "all" || card.dataset.genre === genre;
+            card.style.display = visible ? "block" : "none";
         });
     });
 });
 
-// Открытие фильтра на мобильной
-if (filterToggle) {
-    filterToggle.addEventListener('click', () => {
-        filter.classList.toggle('active');
+// На мобильных фильтр открывается и закрывается отдельной кнопкой.
+if (filterToggle && filterPanel) {
+    filterToggle.addEventListener("click", () => {
+        filterPanel.classList.toggle("active");
     });
 }
-// Открытие описания игры
-const toggleButtons = document.querySelectorAll('.card__toggle');
 
-toggleButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const card = button.closest('.card');
-        card.classList.toggle('active');
+// Кнопка "Подробнее" раскрывает и скрывает мини-описание карточки.
+document.querySelectorAll(".card__toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+        const card = button.closest(".card");
+        card.classList.toggle("active");
     });
 });

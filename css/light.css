@@ -29,19 +29,19 @@ body.light-theme {
 }
 
 .light-theme .hero--home::before {
-    background-image: linear-gradient(rgba(245, 248, 255, 0.24), rgba(245, 248, 255, 0.76)), url("../images/arc-raiders.jpg");
+    background-image: linear-gradient(rgba(245, 248, 255, 0.24)), url("../images/fone.jpg");
 }
 
 .light-theme .hero--catalog::before {
-    background-image: linear-gradient(rgba(245, 248, 255, 0.3), rgba(245, 248, 255, 0.8)), url("../images/Baldur's Gate 3.jpg");
+    background-image: linear-gradient(rgba(245, 248, 255, 0.3)), url("../images/fone2.jpg");
 }
 
 .light-theme .hero--profile::before {
-    background-image: linear-gradient(rgba(245, 248, 255, 0.3), rgba(245, 248, 255, 0.8)), url("../images/It Takes Two.jpg");
+    background-image: linear-gradient(rgba(245, 248, 255, 0.3)), url("../images/fone3.jpg");
 }
 
 .light-theme .hero--auth::before {
-    background-image: linear-gradient(rgba(245, 248, 255, 0.3), rgba(245, 248, 255, 0.8)), url("../images/ELDEN RING NIGHTREIGN.jpg");
+    background-image: linear-gradient(rgba(245, 248, 255, 0.3)), url("../images/fone4.jpg");
 }
 
 .light-theme .hero__text {

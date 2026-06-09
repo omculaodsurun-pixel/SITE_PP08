@@ -28,7 +28,7 @@ if (revealBlocks.length > 0) {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.16 });
+    }, { threshold: 0.01 });
 
     revealBlocks.forEach((block) => {
         if (!block.classList.contains("visible")) {

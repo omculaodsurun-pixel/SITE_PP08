@@ -212,19 +212,19 @@ main {
 }
 
 .hero--home::before {
-    background-image: linear-gradient(rgba(7, 11, 22, 0.24), rgba(7, 11, 22, 0.75)), url("../images/arc-raiders.jpg");
+    background-image: linear-gradient(rgba(7, 11, 22, 0.24), rgba(7, 11, 22, 0.75)), url("../images/fone.jpg");
 }
 
 .hero--catalog::before {
-    background-image: linear-gradient(rgba(7, 11, 22, 0.34), rgba(7, 11, 22, 0.8)), url("../images/Baldur's Gate 3.jpg");
+    background-image: linear-gradient(rgba(7, 11, 22, 0.34), rgba(7, 11, 22, 0.8)), url("../images/fone2.jpg");
 }
 
 .hero--profile::before {
-    background-image: linear-gradient(rgba(7, 11, 22, 0.34), rgba(7, 11, 22, 0.8)), url("../images/It Takes Two.jpg");
+    background-image: linear-gradient(rgba(7, 11, 22, 0.34), rgba(7, 11, 22, 0.8)), url("../images/fone3.jpg");
 }
 
 .hero--auth::before {
-    background-image: linear-gradient(rgba(7, 11, 22, 0.34), rgba(7, 11, 22, 0.8)), url("../images/ELDEN RING NIGHTREIGN.jpg");
+    background-image: linear-gradient(rgba(7, 11, 22, 0.34), rgba(7, 11, 22, 0.8)), url("../images/fone4.jpg");
 }
 
 .hero__content {
@@ -544,6 +544,11 @@ main {
     padding: 40px 0;
 }
 
+.auth .container {
+    display: grid;
+    place-items: center;
+}
+
 .form {
     width: min(460px, 100%);
     display: grid;
@@ -552,6 +557,7 @@ main {
     border-radius: 16px;
     background: rgba(16, 24, 44, 0.82);
     padding: 1.2rem;
+    margin-inline: auto;
 }
 
 .form__label {

@@ -53,6 +53,16 @@ body.light-theme {
 .light-theme .hero__brand {
     color: white;
 }
+.light-theme .hero__textprofile {
+    color: black;
+}
+.light-theme .hero__titleprofile {
+    color: black;
+}
+.light-theme .hero__brandprofile{
+    color: black;
+}
+
 
 /* Для светлой темы контейнеры делают нейтральный фон без затемнения. */
 .light-theme .slider__wrapper,

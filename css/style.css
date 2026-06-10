@@ -251,6 +251,24 @@ main {
     color: #d6e0fd;
     margin-bottom: 1.4rem;
 }
+.hero__brandprofile {
+    font-size: clamp(2.2rem, 5.2vw, 4.5rem);
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 0.65rem;
+    text-shadow: 0 8px 30px rgba(38, 208, 255, 0.25);
+}
+
+.hero__titleprofile {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    margin-bottom: 0.72rem;
+}
+
+.hero__textprofile {
+    max-width: 58ch;
+    color: #d6e0fd;
+    margin-bottom: 1.4rem;
+}
 
 .hero__actions {
     display: flex;
